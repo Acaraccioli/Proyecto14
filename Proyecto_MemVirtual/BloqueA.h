@@ -9,7 +9,7 @@ using namespace std;
 class BloqueA
 {
     public:
-        BloqueA();
+        BloqueA(char * nombre, char * contenido, int primerbloque,int ultimobloque,archivo * a);
         virtual ~BloqueA();
         int tambloque;
         int tamnombre;

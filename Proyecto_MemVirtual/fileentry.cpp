@@ -1,14 +1,13 @@
 #include "fileentry.h"
 
-fileentry::fileentry(char *nom, int e, int t, bool f, int t)
+fileentry::fileentry(char *nom, int e, int te, bool f, int ta)
 {
     this->tamnom=strlen(nom);
     this->nombre=nom;
     this->empieza=e;
-    this->termina=t;
+    this->termina=te;
     this->EsFolder=f;
-    this->TamanoArchivo=t;
-    //tamano de que?
+    this->TamanoArchivo=ta;
 }
 
 fileentry::~fileentry()

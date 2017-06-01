@@ -32,6 +32,18 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="BloqueA.cpp" />
+		<Unit filename="BloqueA.h" />
+		<Unit filename="BloqueF.cpp" />
+		<Unit filename="BloqueF.h" />
+		<Unit filename="DiscoVirtual.cpp" />
+		<Unit filename="DiscoVirtual.h" />
+		<Unit filename="MB.cpp" />
+		<Unit filename="MB.h" />
+		<Unit filename="archivo.cpp" />
+		<Unit filename="archivo.h" />
+		<Unit filename="fileentry.cpp" />
+		<Unit filename="fileentry.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

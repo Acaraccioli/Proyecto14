@@ -1,8 +1,8 @@
 #include "BloqueA.h"
 
-BloqueA::BloqueA(char * nombre, char * contenido int primerbloque,int ultimobloque,archivo * a)
+BloqueA::BloqueA(char * nombre, char * contenido, int primerbloque,int ultimobloque,archivo * a)
 {
-    this->tamnombre=strlen(nombre):
+    this->tamnombre=strlen(nombre);
     this->nombre=nombre;
     this->tamcont=strlen(contenido);
     this->contenido=contenido;
@@ -17,40 +17,41 @@ char * BloqueA::BloqueArchtoChar()
 {
     int pos=0;
     char *datos=new char[tambloque];
-    memcpy(&datos[pos],tambloque,4);
+    memcpy(&datos[pos],&tambloque,4);
     pos+=4;
-    memcpy(&datos[pos],tamnombre,4);
+    memcpy(&datos[pos],&tamnombre,4);
     pos+=4;
-    memcpy(&datos[pos], nombre,tamnombre);
+    memcpy(&datos[pos], &nombre,tamnombre);
     pos+=tamnombre;
-    memcpy(&datos[pos],tamcont,4);
+    memcpy(&datos[pos],&tamcont,4);
     pos+=4;
-    memcpy(&datos[pos],contenido, tamcont);
+    memcpy(&datos[pos],&contenido, tamcont);
     pos+=tamcont;
-    memcpy(&datos[pos],primerbloque,4);
+    memcpy(&datos[pos],&primerbloque,4);
     pos+=4;
-    memcpy(&datos[pos],ultimobloque,4);
+    memcpy(&datos[pos],&ultimobloque,4);
     pos+=4;
     return datos;
 
 
 }
-void InitFromChar(char * info)
+void BloqueA::InitFromChar(char * datos)
 {
+
     int pos=0;
-    memcpy(tambloque,&datos[pos],4);
+    memcpy(&tambloque,&datos[pos],4);
     pos+=4;
-    memcpy(tamnombre,&datos[pos],4);
+    memcpy(&tamnombre,&datos[pos],4);
     pos+=4;
-    memcpy(nombre,&datos[pos],tamnombre);
+    memcpy(&nombre,&datos[pos],tamnombre);
     pos+=tamnombre;
-    memcpy(tamcont,&datos[pos],4);
+    memcpy(&tamcont,&datos[pos],4);
     pos+=4;
-    memcpy(contenido,&datos[pos],tamcont);
+    memcpy(&contenido,&datos[pos],tamcont);
     pos+=tamcont;
-    memcpy(primerbloque,&datos[pos],4);
+    memcpy(&primerbloque,&datos[pos],4);
     pos+=4;
-    memcpy(ultimobloque,&datos[pos],4);
+    memcpy(&ultimobloque,&datos[pos],4);
     pos+=4;
 
 

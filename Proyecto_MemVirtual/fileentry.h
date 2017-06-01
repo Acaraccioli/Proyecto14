@@ -1,6 +1,7 @@
 #ifndef FILEENTRY_H
 #define FILEENTRY_H
 #include <stdio.h>
+#include <string.h>
 using namespace std;
 
 class fileentry

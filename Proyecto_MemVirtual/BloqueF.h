@@ -10,7 +10,7 @@ using namespace std;
 class BloqueF
 {
     public:
-        BloqueF();
+        BloqueF(char *nombre, int capacidad,int numero, int siguientebloque, archivo *a);
         virtual ~BloqueF();
         int numerobloque;
         int tambloque;
@@ -18,11 +18,12 @@ class BloqueF
         int tamnombre;
         char * nombre;
         int sigbloque;
-        list <fileentry> FE;
+        list <fileentry*> FE;
         archivo *arch;
         void InitFromChar(char * datos);
         char * BloqueFtoChar();
         void Guardar();
+        void agregarfe(fileentry * fe);
 
     protected:
 

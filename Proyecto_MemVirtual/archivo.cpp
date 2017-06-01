@@ -1,7 +1,7 @@
 #include "archivo.h"
 
 archivo::archivo( char* file, int size ) {
-    strcpy( this->path, file );
+    path = file;
     this->fp = NULL;
     if( !this->device_exist() ){
         this->CreateFile( size );
