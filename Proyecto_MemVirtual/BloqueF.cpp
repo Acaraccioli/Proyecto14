@@ -12,7 +12,7 @@ BloqueF::BloqueF(char *nombre, int capacidad,int numero, int siguientebloque, ar
     //sigbloque aqui siempre -1?
 }
 void BloqueF::InitFromChar(char * datos)
-{
+{   cout<<"a"<<endl;
     int pos=0;
     memcpy(&numerobloque,&datos[pos],4);
     pos+=4;
@@ -20,18 +20,28 @@ void BloqueF::InitFromChar(char * datos)
     pos+=4;
     memcpy(&capacidadbloque,&datos[pos],4);
     pos+=4;
+    memcpy(&tambloque, &datos[pos], 4);
+    pos += 4;
     memcpy(&tamnombre,&datos[pos],4);
     pos+=4;
     memcpy(&nombre,&datos[pos],tamnombre);
     pos+=tamnombre;
 
 
-    while(datos[pos]!=NULL){
-        fileentry * f = NULL;
-        memcpy(&(f->tamnom),&datos[pos], 4);
+    for(int i = pos; i<tambloque; ){
+               cout<<"b"<<endl;
+
+        fileentry * f = new fileentry("",0,0,true,0);
+          cout<<"c"<<endl;
+
+        memcpy(&f->tamnom,&datos[pos], 4);
         pos += 4;
+           cout<<f->tamnom<<endl;
+
         memcpy(&f->nombre,&datos[pos], f->tamnom);
         pos += f->tamnom;
+          cout<<"e"<<endl;
+
         memcpy(&f->empieza,&datos[pos], 4);
         pos += 4;
         memcpy(&f->termina,&datos[pos], 4);
@@ -46,13 +56,15 @@ void BloqueF::InitFromChar(char * datos)
 char * BloqueF::BloqueFtoChar()
 {
     int pos=0;
-    char *datos=new char[tambloque];
+    char *datos=new char[tambloque+4];
     memcpy(&datos[pos],&numerobloque,4);
     pos+=4;
     memcpy(&datos[pos],&sigbloque,4);
     pos+=4;
     memcpy(&datos[pos], &capacidadbloque,4);
     pos+=4;
+    memcpy(&(datos[pos]), &tambloque, 4);
+    pos += 4;
     memcpy(&datos[pos],&tamnombre,4);
     pos+=4;
     memcpy(&datos[pos],&nombre, tamnombre);

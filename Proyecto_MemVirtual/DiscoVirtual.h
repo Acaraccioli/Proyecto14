@@ -8,6 +8,9 @@
 #include "BloqueF.h"
 #include "iostream"
 #include "string"
+#include <list>
+#include <stdio.h>
+
 class DiscoVirtual
 {
     public:
@@ -23,7 +26,9 @@ class DiscoVirtual
         BloqueF * foldActual;
         void AgregarFolder(char * nom);
         void AgregaArchivo(char * nom, char * cont);
+        void Regresar();
         void AbrirFolder();
+        void Abrir(char * nom);
     protected:
 
     private:

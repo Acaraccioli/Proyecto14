@@ -16,7 +16,7 @@
 	<stdio.h>
 	<iostream>
 
-1496295940 source:c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\bloquef.cpp
+1496338845 source:c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\bloquef.cpp
 	"BloqueF.h"
 
 1496272930 c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\bloquef.h
@@ -29,10 +29,10 @@
 	<stdio.h>
 	<string.h>
 
-1496298930 source:c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\discovirtual.cpp
+1496351317 source:c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\discovirtual.cpp
 	"DiscoVirtual.h"
 
-1496298054 c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\discovirtual.h
+1496343275 c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\discovirtual.h
 	"archivo.h"
 	"MB.h"
 	"fileentry.h"
@@ -41,6 +41,8 @@
 	"BloqueF.h"
 	"iostream"
 	"string"
+	<list>
+	<stdio.h>
 
 1496273177 c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\mb.h
 	"archivo.h"
@@ -49,7 +51,7 @@
 1496274508 source:c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\fileentry.cpp
 	"fileentry.h"
 
-1496299022 source:c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\main.cpp
+1496350172 source:c:\users\alejandro caraccioli\desktop\estructura de datos\proyecto_memvirtual\main.cpp
 	<iostream>
 	"DiscoVirtual.h"
 
